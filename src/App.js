@@ -1,23 +1,509 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./Assets/Group 114.png";
+import banner from "./Assets/ILLUSTRATION.png";
+import Card from "./Components/Card";
+import SmallCard from "./Components/SmallCard";
+import banner7 from "./Assets/Vector.png";
+import banner11 from "./Assets/Group 35.png";
+import Column from "./Components/Column";
+import banner12 from "./Assets/Vector-4.png";
+import Hocrux1 from "./Components/Hocrux1";
+import Jobber from "./Components/Jobber";
+import banner15 from "./Assets/Vector-5.png";
+import banner16 from "./Assets/Vector-6.png";
+import banner17 from "./Assets/Vector-7.png";
+import banner18 from "./Assets/Vector-8.png";
+import banner13 from "./Assets/Vector-3.png";
+import Comment from "./Components/Comment";
+import Servicer from "./Components/Servicer";
+import banner14 from "./Assets/Group 34.png";
+import banner6 from "./Assets/Desktop.png";
+import TocIcon from '@mui/icons-material/Toc';
+import SearchIcon from '@mui/icons-material/Search';
+import banner1 from "./Assets/Group 117.png";
+import banner19 from "./Assets/Group-2.png";
+import banner20 from "./Assets/Group.png";
+import banner21 from "./Assets/Group-1.png";
+import photo from "./Assets/Vector-2.png";
+import photo1 from './Assets/dungeon.png';
+import photo2 from './Assets/Vector-1.png';
 
 function App() {
+ 
+
+  const ColumnArr = [
+    {
+      name: `AJMAN OFFSHORE`,
+      amt: `$2,997`,
+      type: `One Time Payment`,
+      add: `Ajman Offshore New Company formation includes`,
+      feat: ["Attestation Charges", "Registered Agent", "Registered Office","Varal Administrative",
+      "Preparing Statutory File",
+      "Liasing with Registration Authorities",
+      "Due Diligence Appraisal",
+      "Keeping The Register",
+      "Seal Charges",
+      "Certificate of Good Standing"],
+    },
+    {
+      name: `RAK ICC`,
+      amt: `$2,997`,
+      type: `One Time Payment`,
+      add: `Rak Icc New Company formation includes`,
+      feat: ["Attestation Charges", "Registered Agent", "Registered Office","Varal Administrative",
+      "Preparing Statutory File",
+      "Liasing with Registration Authorities",
+      "Due Diligence Appraisal",
+      "Keeping The Register",
+      "Seal Charges",
+      "Certificate of Good Standing"],
+    },
+    {
+      name: `SHARJAH MEDIA CITY`,
+      amt: `$4,124`,
+      type: `One Time Payment`,
+      add: `Sharjah Media City New Company formation include `,
+      feat: ["Attestation Charges", "Registered Agent", "Registered Office","Varal Administrative",
+      "Preparing Statutory File",
+      "Liasing with Registration Authorities",
+      "Due Diligence Appraisal",
+      "Keeping The Register",
+      "Seal Charges",
+      "Certificate of Good Standing"],
+    },
+  ];
+
+  const ServicerArr = [
+    {
+      title: `Services`,
+      specs: [
+        "Products",
+        "Solutions",
+        "Assurance",
+        "FAQ",
+        "Working at Varal-Singhania",
+      ],
+    },
+    { title: `Policies`, specs: ["Privacy Policy", "Terms & Conditions"] },
+    { title: `About`, specs: ["About Us", "Contact Us"] },
+    {
+      title: `Address`,
+      specs: [
+        "608 One Lake Plaza, Cluster T",
+        "Al Sarayat Street, Jumeirah",
+        "Lake Towers",
+        "Dubai",
+        "United Arab Emirates",
+      ],
+    },
+  ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      {/* Navbar */}
+      <div className="navbar">
+        <img className="logo " src={logo} />
+
+        <div className="navbar_items">
+          <p style={{ marginLeft: `0px`, color: "black" }}>Home</p>
+          <p>Services</p>
+          <p>Pricing</p>
+          <p>About Us</p>
+          <button className="stc_button">Start a Company</button>
+        </div>
+        <div className="logomenu"><TocIcon/></div>
+      </div>
+      {/* Search button */}
+      <div className="serbox">
+        <div className="serbody">
+          <SearchIcon className='text-blue-600 font-bold text-4xl ' />
+          <input
+            className="ser_inp"
+            type="text"
+            placeholder="Search A Term | Topic"
+          ></input>
+        </div>
+      </div>
+
+      {/* Content and image */}
+
+      <div className="contImg">
+        <div className="co1">
+          <p className="">Claim a Free Quote</p>
+          <h2 className="A">
+            Get started on fulfilling <br /> your Dubai or UAE <br />
+            dream.
+          </h2>
+          <div className="bancont2">
+            <img className=" banner2" src={banner} />
+          </div>
+          <h2 className="B">UAE & Offshore Company</h2>
+          <h2 className="C">
+            We provide you with information about UAE or
+            <br /> Offshore Company Registration & help you <br />
+            setup your company with a bank account and <br /> visas.
+          </h2>
+          <div className="butcont">
+            <button className="AA ">Start a Company</button>
+            <button className="BB">Reniew a Company</button>
+          </div>
+        </div>
+        <div className="bancont">
+          <img className=" banner" src={banner} />
+        </div>
+      </div>
+
+      {/* One line quote */}
+
+      <div
+        className="main41"
+        
+      >
+        <p className="line">
+          Watch the video about UAE or Offshore Company Registration
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <img className="banner1" src={banner1} alt="" />
+      </div>
+
+      {/* Quotes of many line in center */}
+
+      <div className="quotes ">
+        <h1 className="quotes1">
+          Dedicated
+          <br />
+          <span className="">to our mission we are</span>
+        </h1>
+        <p className=" quotes2">
+          Our services include Company Formation & Renewals,
+          <br />
+          Trust & Fiduciary, Tax Residency Setup With Family, Bank
+          <br />
+          Accounts, Remote Management, Stock Trading <br />
+          Platforms, Ownership Solutions.
+        </p>
+        <br />
+      </div>
+
+      {/* Main three zones,company */}
+      
+      <div className="main">
+        <SmallCard 
+        icon={photo1}
+        title={`UAE Free Zone Company`}
+        text={`Your registration agent, will answer all of your questions and help you to reach
+        a conclusion that meets your objectives of investing in the UAE.`
+
+        }/>
+      
+      <SmallCard 
+        icon={photo}
+        title={`Dubai Local Companies`}
+        text={`The Dubai LLC formation documents are actually articles of organization 
+        or a certificate of organization. You can get yours today.`
+
+        }/>
+
+       <SmallCard 
+        icon={photo2}
+        title={`Offshore Companies`}
+        text={`You can register an offshore company
+        and open its bank account in Dubai. Your agent will help you along all the
+        process
+        `
+
+        }/>
+        
+      </div>
+
+      {/* Grid properties for content main7*/}
+
+      <div className="column">
+        <div className="column1">
+          <div className="col_1">
+            <p className="col_line">
+              Learn the ways in which you can benefit <br />
+              from a UAE/Offshore Company. Then get <br />
+              started on fulfilling your UAE dream.
+            </p>
+            <p className="col_quote">Claim a Free Quote</p>
+          </div>
+          <Card
+            img={banner6}
+            title={"Bank Acccount Setup"}
+            text={
+              <>
+                There are many banks in the United <br />
+                Arab Emirates [UAE]. Both locally <br />
+                owned and branches of <br />
+                multinational ones. Foreign banks <br />
+                adjust according to their parent s <br />
+                strategies and have changed local <br />
+                requirements overnight in the past. <br />
+                But we are here to help you.
+              </>
+            }
+          />
+          <Card
+          img={banner19}
+            title={"UAE Company Visas"}
+            text={
+              <>
+                Your application for visas is critical
+                <br />
+                especially if you intend to move to
+                <br />
+                Dubai. This becomes even more
+                <br />
+                urgent if your family will also move
+                <br />
+                on your behalf smoothly so that you
+                <br />
+                may only focus on doing what
+                <br />
+                matters most to you.
+              </>
+            }
+          />
+        </div>
+
+        <div className="column2">
+          
+           <Card
+           img={banner20}
+            title={"Advice & Guidance"}
+            text={
+              <>
+                All activities in the UAE are licensed.
+                <br />
+                Whether manufacturing, finance,
+                <br />
+                trading, marketing, consultancy or
+                <br />
+                restaurants. In some countries only
+                <br />
+                manufacturing is licensed. In others
+                <br />
+                there is a threshold below which
+                <br />
+                business are encouraged. Get our
+                <br />
+                insightfull guidance today
+              </>
+            }
+          />
+          <Card  
+          img={banner21}
+            title={"Registration Document  "}
+            text={
+              <>
+                There are many banks in the United <br />
+                Arab Emirates [UAE]. Both locally <br />
+                owned and branches of <br />
+                multinational ones. Foreign banks <br />
+                adjust according to their parent s <br />
+                strategies and have changed local <br />
+                requirements overnight in the past. <br />
+                But we are here to help you.
+              </>
+            }
+          />
+
+          <div className="col_2">
+            <p className="col2_content">
+              We have gathered a team of <br />
+              professionals to craft adequate <br />
+              services you can rely on for a friction <br />
+              free setup in UAE.
+            </p>
+            <div className="col2_flex">
+              <p className="col2_flexcon">More about our services</p>
+              <img src={banner7} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Most Popular affordable... */}
+
+      <div className="middle">
+        <h1>
+          Most popular affordable pricing per <br />
+          jurisdictions are brought to you to <br />
+          kick off your adventure.
+        </h1>
+      </div>
+
+      {/*Three colums for payment  */}
+
+      <div className="bigcolumn">
+        {ColumnArr.map(({ name, amt, type, add, feat }, index) => (
+          <Column
+            name={name}
+            amt={amt}
+            type={type}
+            add={add}
+            feat={feat}
+            boole={index & 1}
+            key={index}
+          />
+        ))}
+      </div>
+
+      {/* last section */}
+
+      <div className="last_sec">
+        {/* 1st col */}
+
+        <div className="last_first">
+          <Hocrux1
+            text={
+              <>
+                Read about our blogs for more <br />
+                information on our processes
+              </>
+            }
+          />
+
+          <Jobber
+            text={
+              <>
+                How to start a company
+                <br />
+                formation in Dubai
+              </>
+            }
+            time={`5 Minutes`}
+            link={banner12}
+          />
+          <Jobber
+            text={
+              <>
+                How to start an Offshore
+                <br />
+                company formation in Dubai
+              </>
+            }
+            time={`5 Minutes`}
+            link={banner12}
+          />
+
+          <Jobber
+            tu
+            text={
+              <>
+                SEO Dubai: Who benefits
+                <br />
+                the most?
+              </>
+            }
+            time={`5 Minutes`}
+            link={banner12}
+          />
+
+          {/* satisfied... */}
+
+          <Hocrux1
+            text={
+              <>
+                Satisfied We are When Our <br /> Customers Are Happy{" "}
+              </>
+            }
+          />
+
+          {/* comments */}
+
+          <Comment
+            comm={
+              <>
+                {" "}
+                "I am very happy with them. I'll <br />
+                continue to use their services in <br />
+                future & highly recommend them <br />
+                to anyone,"
+              </>
+            }
+            name={"Muhib Abrar"}
+            link={banner13}
+          />
+
+          <Comment
+            comm={
+              <>
+                {" "}
+                "Rama has a high level of integrity, <br />
+                intellect, knowledge of his <br />
+                business, resourcefulness and <br />
+                humanity,"
+              </>
+            }
+            name={"Colin Saldahna"}
+            link={banner13}
+          />
+
+          <Comment
+            comm={
+              <>
+                {" "}
+                "Your advise was so complete that I <br />
+                actually realized how beneficial <br />
+                this would be to my clients and my <br />
+                business.
+              </>
+            }
+            name={"Mark Swann"}
+            link={banner13}
+          />
+        </div>
+        {/* 2nd col */}
+
+        <div className="www">
+          <Hocrux1
+            text={
+              <>
+                Get to know the whole us and <br />
+                more of our services{" "}
+              </>
+            }
+          />
+          <div className=" gridooo">
+            {ServicerArr.map(({ title, specs }, y) => (
+              <Servicer key={y} title={title} specs={specs} />
+            ))}
+          </div>
+
+          <div>
+            <div style={{ scale: "1.05" }} className="last_header">
+              <p className="last_head">Subscribe Now</p>
+              <p>
+                Subscribe now to receive our <br />
+                Newsletters about amazing <br />
+                opportunities in Dubai
+              </p>
+            </div>
+            <div className="last_email">
+              <input
+                className="email"
+                type="email"
+                placeholder="Enter email address"
+              />
+              <img className="email_img" src={banner14} />
+            </div>
+          </div>
+
+          <div className="social">
+            <img style={{ paddingLeft: "0px" }} src={banner15} />
+            <img src={banner16} />
+            <img src={banner17} />
+            <img src={banner18} />
+          </div>
+        </div>
+      </div>
+
+      {/* End */}
+
+      <div className="footer">
+        <p>Varaluae 2021 C All Right Reserved</p>
+      </div>
     </div>
   );
 }
